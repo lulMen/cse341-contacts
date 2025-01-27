@@ -88,6 +88,10 @@ const updateContact = async (req, res) => {
                 { $set: updates }
             );
 
+        if (result.matchedCount === 0) {
+            return res.status(404).json({ message: 'Contact not found' });
+        }
+
         res.status(200).json({ message: 'Contact updated successfully' });
     } catch (err) {
         console.error(`Error updating contact: ${err}`);
