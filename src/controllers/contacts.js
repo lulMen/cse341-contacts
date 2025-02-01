@@ -92,7 +92,7 @@ const updateContact = async (req, res) => {
             return res.status(404).json({ message: 'Contact not found' });
         }
 
-        res.status(200).json({ message: 'Contact updated successfully' });
+        res.status(204).json({ message: 'Contact updated successfully' });
     } catch (err) {
         console.error(`Error updating contact: ${err}`);
         res.status(500).json({ error: 'An error occured while updating the contact' });
