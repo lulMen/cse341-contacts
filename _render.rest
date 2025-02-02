@@ -1,0 +1,27 @@
+GET https://cse341-contacts-rl68.onrender.com/
+###
+GET https://cse341-contacts-rl68.onrender.com/contacts
+###
+GET https://cse341-contacts-rl68.onrender.com/contacts/6797177f64f92adedfecf3f3
+###
+POST https://cse341-contacts-rl68.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Grace",
+    "lastName": "Henderson",
+    "email": "grace.henderson@example.com",
+    "favoriteColor": "Teal",
+    "birthday": "1994-06-20"
+}
+###
+PUT https://cse341-contacts-rl68.onrender.com/contacts/6797177f64f92adedfecf3f3
+Content-Type: application/json
+
+{
+    "firstName": "Camille",
+    "email": "camille.henderson@example.com",
+    "favoriteColor": "Lavender"
+}
+###
+DELETE https://cse341-contacts-rl68.onrender.com/contacts/679717d464f92adedfecf3f4

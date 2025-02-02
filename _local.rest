@@ -1,0 +1,27 @@
+GET http://localhost:8080/
+###
+GET http://localhost:8080/contacts
+###
+GET http://localhost:8080/contacts/6797076ea37ec4feb9e9c016
+###
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Grace",
+    "lastName": "Henderson",
+    "email": "grace.henderson@example.com",
+    "favoriteColor": "Teal",
+    "birthday": "1994-06-20"
+}
+###
+PUT http://localhost:8080/contacts/6797076ea37ec4feb9e9c016
+Content-Type: application/json
+
+{
+    "firstName": "Camille",
+    "email": "camille.henderson@example.com",
+    "favoriteColor": "Lavender"
+}
+###
+DELETE http://localhost:8080/contacts/6797076ea37ec4feb9e9c016
