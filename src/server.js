@@ -3,11 +3,13 @@ const MongoClient = require('../db/connection');
 const Router = require('./routes/contacts');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../src/docs/swagger-output.json');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
 
 var app = express();
 app
+    .use(cors())
     .use(express.json())
     .use(express.urlencoded({ extended: true }))
     .use('/contacts', Router)
